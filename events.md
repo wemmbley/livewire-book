@@ -14,3 +14,17 @@ public function loadData() {
 ```js
 Livewire.dispatch('load-data');
 ```
+Для того чтобы передать какие-либо данные в метод, мы используем второй аргумент dispatch – массив.
+
+```js
+Livewire.dispatch('load-data', ['test', true, 5]);
+```
+
+Таким образом, в наш метод передастся три аргумента.
+
+```php
+#[On('load-data')]
+public function loadData(string $name, bool $status, int $number) {
+    dd('Event was called.');
+}
+```
