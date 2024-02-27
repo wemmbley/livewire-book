@@ -14,6 +14,9 @@ public function loadData() {
 ```js
 Livewire.dispatch('load-data');
 ```
+
+## Аргументы события
+
 Для того чтобы передать какие-либо данные в метод, мы используем второй аргумент dispatch – массив.
 
 ```js
