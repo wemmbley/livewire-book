@@ -31,3 +31,19 @@ public function loadData(string $name, bool $status, int $number) {
     dd('Event was called.');
 }
 ```
+
+## JavaScript события
+
+Для обьявления прослушивателя события
+
+```js
+@this.on('modal-work-in-progress', function (event) {
+    // your code
+}
+```
+
+Для вызова события 
+
+```php
+$this->dispatch('modal-work-in-progress');
+```
