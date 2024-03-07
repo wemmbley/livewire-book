@@ -35,7 +35,7 @@ public function loadData(string $name, bool $status, int $number) {
 ## Вызов события конкретного компонента
 
 ```js
-Livewire.dispatch('', 'deals::deal-info.modal.status-in-progress', 'show-modal');
+Livewire.dispatch('', 'deals::deal-info.modal.status-in-progress', 'show-modal', data);
 // 1 аргумент пуст, второй – имя компонента, третий – имя события
 ```
 
@@ -53,4 +53,10 @@ Livewire.dispatch('', 'deals::deal-info.modal.status-in-progress', 'show-modal')
 
 ```php
 $this->dispatch('modal-work-in-progress');
+```
+
+## Вызов JS события посредством JS
+```js
+Livewire.dispatch('deals::deal-info.modal.status-in-progress', 'show-modal', data);
+// 1 - имя компонента, 2 - название события
 ```
