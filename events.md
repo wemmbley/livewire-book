@@ -32,6 +32,13 @@ public function loadData(string $name, bool $status, int $number) {
 }
 ```
 
+## Вызов события конкретного компонента
+
+```js
+Livewire.dispatch('', 'deals::deal-info.modal.status-in-progress', 'show-modal');
+// 1 аргумент пуст, второй – имя компонента, третий – имя события
+```
+
 ## JavaScript события
 
 Для обьявления прослушивателя события
