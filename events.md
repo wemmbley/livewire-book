@@ -55,6 +55,15 @@ Livewire.dispatch('', 'deals::deal-info.modal.status-in-progress', 'show-modal',
 $this->dispatch('modal-work-in-progress');
 ```
 
+## JavaScript: если ничерта не помогло, а событие компонента все же нужно вызвать
+
+```js
+const componentId = document.querySelector('#yourComponentId');
+const wireComponent = Livewire.find(componentId))
+
+wireComponent.dispatch('eventName', [data]);
+```
+
 ## Вызов JS события посредством JS
 ```js
 Livewire.dispatch('deals::deal-info.modal.status-in-progress', 'show-modal', data);
