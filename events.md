@@ -58,10 +58,10 @@ $this->dispatch('modal-work-in-progress');
 ## JavaScript: если ничерта не помогло, а событие компонента все же нужно вызвать
 
 ```js
-const componentId = document.querySelector('#yourComponentId');
-const wireComponent = Livewire.find(componentId))
+const componentId = document.querySelector('#kanban-board-component');
+const wireComponent = Livewire.find(componentId.getAttribute("wire:id"));
 
-wireComponent.dispatch('eventName', [data]);
+wireComponent.dispatch('deal-load-board', [data]);
 ```
 
 ## Вызов JS события посредством JS
