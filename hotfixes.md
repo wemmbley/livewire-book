@@ -41,3 +41,7 @@ window.addEventListener('livewire:initialized', () => {
                 $changeOwnerModal.find('#userSelect').select2('destroy');
             });
 ```
+
+## JS не отрабатывает на элементе из кода, хотя работает из консоли браузера
+
+Вероятно дело в отсутствующем `wire:ignore` на элементе, потому что скорее всего компонент перерисовывается.
