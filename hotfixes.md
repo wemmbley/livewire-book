@@ -48,4 +48,18 @@ window.addEventListener('livewire:initialized', () => {
 
 ## property type not supported in livewire for property
 
-Вероятно попытка записать в свойство компонента результат метода `->paginate()`. Лучше передавать такие обьемы данных в шаблон `render()` через функцию `compact()`.
+Вероятно попытка записать в свойство компонента результат метода `->paginate()`. Лучше передавать такие обьемы данных в шаблон `render()` через функцию `compact()`, а при необходимости перерендерить компонент чтобы заново вызвался метод `render()`, но уже подставить туда новые данные. Пример:
+
+```php
+public $page = 1;
+
+public function render() {
+    return view('myview.blade.php', [
+        'deals' => Deal::paginate($this->page)
+    ]);
+}
+```
+И на фронте
+```js
+@this.set('page', 2); // новый стейт перерендерит компонент +даем новые данные для вьюхи
+```
