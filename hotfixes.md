@@ -82,7 +82,7 @@ document.addEventListener('livewire:initialized', function () {
 
 ## TypeError: Cannot read properties of null (reading 'getAttribute') при попытке получить компонент Livewire.find()
 
-Вероятнее всего у данного компонента прописан свой wire:key и к сожалению тут ты идешь нахуй.
+Вероятнее всего у данного компонента прописан wire:key вместо стандартного который генерирует лайввайр на лет, и к сожалению тут ты идешь нахуй.
 
 ## Если модалка пропадает даже нисмотря на wire:ignore.self
 
